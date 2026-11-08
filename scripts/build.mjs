@@ -4,6 +4,7 @@ const root = new URL('../', import.meta.url);
 const output = new URL('dist/', root);
 const files = [
   'index.html',
+  '404.html',
   'styles.css',
   'theme.css',
   'theme.js',

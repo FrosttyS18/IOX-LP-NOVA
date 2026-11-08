@@ -114,6 +114,7 @@ html { scroll-padding-top: calc(var(--header-height) + 24px); }
 [data-theme="light"] .contact-facts > div { background: var(--card-surface); }
 [data-theme="light"] .contact-facts svg { stroke: #95651d; }
 [data-theme="light"] .select-trigger.is-placeholder { color: #716b63; }
+[data-theme="light"] .select-trigger.is-placeholder > span { opacity: 1; }
 [data-theme="light"] .select-options { background: #fff; border-color: var(--card-border); }
 [data-theme="light"] .select-option { color: #514c45; }
 [data-theme="light"] .select-option:hover,

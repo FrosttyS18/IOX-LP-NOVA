@@ -238,7 +238,7 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
 .select-trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
 .select-trigger[aria-invalid="true"] { border-color: #c7756e; }
 .select-trigger.is-placeholder { color: #aaa; }
-.select-trigger.is-placeholder > span { opacity: .65; }
+.select-trigger.is-placeholder > span { opacity: .72; }
 .select-options { position: absolute; z-index: 20; top: calc(100% + 8px); left: 0; right: 0; max-height: min(260px, 40vh); overflow-y: auto; margin: 0; padding: 6px; list-style: none; border: 1px solid #353535; border-radius: 10px; background: #171717; }
 .select-option { display: flex; align-items: center; min-height: 44px; padding: 10px 12px; border-radius: 6px; color: #c2c2c2; font-size: 14px; line-height: 22px; cursor: pointer; }
 .select-option:hover, .select-option.is-active { background: #262626; color: #fff; }

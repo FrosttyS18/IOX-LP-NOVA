@@ -25,6 +25,7 @@ Campos e fluxo da LP de origem, conferidos em 07/11/2026: https://codex-iox-90-v
 - O título do comparativo equilibra a primeira frase e permite que a frase em semibold ocupe uma linha no desktop intermediário. As porcentagens acompanham a ponta das barras durante a animação, com intervalo de 18 px no desktop, 16 px no tablet e 12 px no celular.
 - Comparativo de 2025, fontes e aviso do simulador compactados; imagem da segunda seção menor, mantendo proporções e transparência.
 - Formulário e simulador usam a mesma superfície neutra e borda discreta dos cards. Os campos do formulário têm bordas ainda mais suaves, e o envio usa o botão arredondado do site.
+- O placeholder do seletor de investimento mantém opacidade de 72% no tema escuro e texto cinza sem transparência adicional no tema claro, para preservar contraste de leitura.
 - Fontes definidas anteriormente em 20 px reduzidas para 16 px, incluindo textos do comparativo, rótulos e porcentagens das barras, botões e resultados do simulador. Os respiros entre seções foram preservados. Intervalo entre formulário e chamada final reduzido.
 - Barras e porcentagens animam uma vez quando o comparativo entra na tela, mantendo os valores finais acessíveis.
 - Os títulos entram uma vez, com subida de 20 px e fade. O título da hero anima ao carregar a página durante 1400 ms, com progressão gradual e sem depender de scroll. Os demais títulos usam 600 ms e aguardam o scroll e uma margem de 120 px dentro da tela antes de animar. Sem desfoque, mudanças de tamanho ou alteração do layout. Sem JavaScript, na impressão ou com movimento reduzido, permanecem visíveis.
@@ -50,6 +51,7 @@ Sirva esta pasta com um servidor HTTP estático. O arquivo de entrada é `index.
 ## Publicação no Cloudflare Pages
 
 - A raiz pública contém `robots.txt`, `sitemap.xml` e `llms.txt`. O sitemap XML lista apenas a URL principal; as seções são âncoras da mesma página. O build remove as cópias antigas `robot.txt`, `llm.txt` e `sitemap.txt` da saída local. Atualizar os endereços desses arquivos e o link canonical se o domínio público mudar.
+- `404.html` faz o Pages responder HTTP 404 para caminhos inexistentes, evitando que a home seja devolvida como HTTP 200 em endereços como `/.well-known/ai-catalog.json`. Esta landing page não anuncia serviços de agentes; o catálogo ARD ausente deve ser tratado como não aplicável, e não como JSON malformado.
 - Conta: Wesley Frostty.
 - Repositório: `FrosttyS18/IOX-LP-NOVA`, branch `main`.
 - Projeto: `iox-lp-nova`.
