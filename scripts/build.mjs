@@ -5,6 +5,8 @@ const output = new URL('dist/', root);
 const files = [
   'index.html',
   'styles.css',
+  'theme.css',
+  'theme.js',
   'script.js',
   'section-effects.js',
   'historical-series.js',

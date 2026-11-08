@@ -67,9 +67,9 @@ function updateJourneyChart(amount, values, { animate = false } = {}) {
     chartElement('text', { x:left - 9, y:y(amount * factor) + 4, 'text-anchor':'end' }, compactMoney.format(amount * factor)),
   ]));
   seriesGroup.replaceChildren(...Object.entries(historicalSeries).flatMap(([key, series]) => [
-    chartElement('polyline', { points:values[key].map((value, i) => `${x(i)},${y(value)}`).join(' '), stroke:series.color, class:'journey-series-line' }),
-    ...values[key].map((value, i) => chartElement('circle', { cx:x(i), cy:y(value), r:3, fill:series.color })),
-    ...compact ? [] : [chartElement('text', { x:right + 12, y:y(values[key][3]) + 4, class:'journey-end-label', style:`fill:${series.color}` }, `${series.label} ${money.format(values[key][3])}`)],
+    chartElement('polyline', { points:values[key].map((value, i) => `${x(i)},${y(value)}`).join(' '), stroke:series.color, class:'journey-series-line', 'data-series':key }),
+    ...values[key].map((value, i) => chartElement('circle', { cx:x(i), cy:y(value), r:3, fill:series.color, 'data-series':key })),
+    ...compact ? [] : [chartElement('text', { x:right + 12, y:y(values[key][3]) + 4, class:'journey-end-label', style:`fill:${series.color}`, 'data-series':key }, `${series.label} ${money.format(values[key][3])}`)],
   ]));
   chart.querySelectorAll('.journey-dates text').forEach((date, index) => {
     date.setAttribute('x', x(index));

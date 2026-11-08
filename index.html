@@ -6,9 +6,11 @@
     <meta name="theme-color" content="#0d0d0d">
     <meta name="description" content="Você decide o legado da sua vida financeira. Conheça o Grupo IOX e converse com um especialista.">
     <title>Grupo IOX | Construa seu legado financeiro</title>
+    <script src="theme.js"></script>
     <link rel="icon" href="assets/images/iox-symbol.png" type="image/png">
     <link rel="preload" href="assets/fonts/plus-jakarta-sans-400.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
     <script src="script.js" defer></script>
     <script src="contact.js" defer></script>
     <script src="form-controls.js" type="module"></script>
@@ -23,10 +25,16 @@
           <img src="assets/images/iox-symbol.png" width="42" height="42" alt="">
           <span>Grupo <strong>IOX</strong></span>
         </a>
-        <a class="button header-contact" href="#contato">
-          <span>Fale com um especialista</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M6 5h13v13"/></svg>
-        </a>
+        <div class="header-actions">
+          <a class="button header-contact" href="#contato">
+            <span>Fale com um especialista</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M6 5h13v13"/></svg>
+          </a>
+          <button class="theme-toggle" type="button" aria-label="Ativar modo claro" title="Ativar modo claro" hidden>
+            <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+            <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.2A8.6 8.6 0 0 1 10.8 3.5a8.6 8.6 0 1 0 9.7 9.7Z"/></svg>
+          </button>
+        </div>
       </div>
     </header>
     <main id="conteudo">

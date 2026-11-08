@@ -17,6 +17,8 @@ Campos e fluxo da LP de origem, conferidos em 07/11/2026: https://codex-iox-90-v
 
 ## Ajustes visuais e movimento
 
+- O cabeçalho acompanha a rolagem no desktop e no celular. Os destinos dos links reservam espaço para a barra fixa.
+- O botão de tema aparece ao lado do contato acima de 1000 px. A escolha entre escuro e claro fica salva localmente; o padrão continua escuro. A troca revela a página inteira com um círculo partindo do botão em 750 ms, usando View Transitions. Com movimento reduzido ou sem suporte à API, a mudança é imediata. Fotos e símbolo metálico preservam suas cores.
 - No desktop, imagens e títulos usam limites de largura e altura da viewport, mantendo a proporção das imagens. O conteúdo do legado ocupa até 88% da altura disponível; a seção pode crescer além de uma tela.
 - Os respiros verticais não diminuem com a altura da janela: 96 px por lado no desktop amplo e 80 px até 1750 px de largura. Tablet e celular mantêm os espaçamentos próprios. Não há zoom, escala ou desfoque aplicado à página inteira.
 - Conferência responsiva final: 1920×1080, 1920×900, 2560×1080, 1440×900, 1366×768, 768×1024, 430×932 e 390×844, sem overflow horizontal. A revisão mobile considera larguras a partir de 390 px; as regras existentes abaixo disso foram preservadas.
@@ -64,6 +66,7 @@ Sirva esta pasta com um servidor HTTP estático. O arquivo de entrada é `index.
 
 - `index.html`: conteúdo semântico das oito seções, cabeçalho e rodapé.
 - `styles.css`: composição desktop, adaptações responsivas e acessibilidade.
+- `theme.css` e `theme.js`: cabeçalho fixo, tema claro, preferência local e transição circular entre temas.
 - `script.js`: cobertura do loop responsivo e movimento dos cards ao mouse.
 - `contact.js`: validações e fluxo de orientação por e-mail do formulário.
 - `form-controls.js`: modalidade de foco, lista de seleção acessível e sincronização com o formulário.
