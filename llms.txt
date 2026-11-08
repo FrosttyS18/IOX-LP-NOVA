@@ -1,0 +1,20 @@
+# Grupo IOX — IOX 90
+
+> Landing page do Grupo IOX sobre o IOX 90, com apresentação do fundo, histórico, comparação de rendimentos, simulador ilustrativo e contato com um especialista.
+
+O site está em português do Brasil e reúne todo o conteúdo em uma única página. O IOX 90 é apresentado como um fundo de investimento em direitos creditórios destinado a investidores qualificados. As condições devem ser consultadas na lâmina e no regulamento do fundo.
+
+O simulador compara trajetórias históricas do IOX 90, do Ibovespa e do IFIX entre janeiro de 2024 e setembro de 2026. A simulação é ilustrativa e não considera impostos, taxas ou custos. Rentabilidade passada não representa garantia de resultado futuro. O conteúdo não constitui recomendação de investimento.
+
+## Conteúdo da página
+
+- [Página principal](https://iox-lp-nova.pages.dev/): apresentação do Grupo IOX e do IOX 90.
+- [Histórico do IOX 90](https://iox-lp-nova.pages.dev/#proof-title): contexto e resultados históricos apresentados na página.
+- [Comparativo de rendimentos](https://iox-lp-nova.pages.dev/#comparison-title): comparação de 2025 e fontes dos dados.
+- [Simulador histórico](https://iox-lp-nova.pages.dev/#simulador): comparação ilustrativa para um valor de investimento informado.
+- [Contato](https://iox-lp-nova.pages.dev/#contato): formulário e orientação de contato com um especialista.
+
+## Documentos
+
+- [Lâmina e regulamento](https://iox.com.vc/investimento/fic-de-fidc-iox-90/): página de documentos do fundo indicada no rodapé.
+- [Política de Privacidade](https://grupoiox.com.br/politica-de-privacidade): política indicada na página.

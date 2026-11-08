@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iox-lp-nova.pages.dev/sitemap.txt
