@@ -32,6 +32,10 @@ function startHeadingsOnScroll() {
 
 if (!reducedMotion.matches) {
   for (const heading of pageHeadings) {
+    if (heading.id === 'hero-title') {
+      revealHeading(heading);
+      continue;
+    }
     const bounds = heading.getBoundingClientRect();
     if (bounds.top >= window.innerHeight * 0.65 || bounds.bottom <= 0) {
       heading.classList.add('heading-reveal');
