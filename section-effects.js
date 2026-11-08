@@ -1,6 +1,45 @@
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const returnsCard = document.querySelector('.returns-card');
 const legacySection = document.querySelector('.legacy');
+const pageHeadings = [...document.querySelectorAll('main h1, main h2, main h3')];
+const visibleHeadings = new Set();
+const headingStartScroll = window.scrollY;
+let headingsStarted = false;
+
+function revealHeading(heading) {
+  heading.classList.add('heading-reveal', 'is-heading-visible');
+  headingObserver.unobserve(heading);
+  visibleHeadings.delete(heading);
+}
+
+const headingObserver = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) {
+      visibleHeadings.delete(entry.target);
+      continue;
+    }
+    visibleHeadings.add(entry.target);
+    if (headingsStarted) revealHeading(entry.target);
+  }
+}, { threshold: 0.35, rootMargin: '0px 0px -120px 0px' });
+
+function startHeadingsOnScroll() {
+  if (Math.abs(window.scrollY - headingStartScroll) < 2) return;
+  headingsStarted = true;
+  window.removeEventListener('scroll', startHeadingsOnScroll);
+  for (const heading of visibleHeadings) revealHeading(heading);
+}
+
+if (!reducedMotion.matches) {
+  for (const heading of pageHeadings) {
+    const bounds = heading.getBoundingClientRect();
+    if (bounds.top >= window.innerHeight * 0.65 || bounds.bottom <= 0) {
+      heading.classList.add('heading-reveal');
+    }
+    headingObserver.observe(heading);
+  }
+  window.addEventListener('scroll', startHeadingsOnScroll, { passive: true });
+}
 const percentageFormat = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const returnRows = [...returnsCard.querySelectorAll('.return-row')].map((row) => {
   const number = row.querySelector('.return-value');
@@ -87,6 +126,10 @@ if (!reducedMotion.matches) {
 reducedMotion.addEventListener('change', () => {
   scheduleLegacyUpdate();
   if (!reducedMotion.matches) return;
+  headingObserver.disconnect();
+  window.removeEventListener('scroll', startHeadingsOnScroll);
+  visibleHeadings.clear();
+  for (const heading of pageHeadings) heading.classList.add('is-heading-visible');
   returnsStarted = true;
   returnsObserver.disconnect();
   finishReturns();
