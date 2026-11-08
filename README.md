@@ -49,7 +49,7 @@ Sirva esta pasta com um servidor HTTP estático. O arquivo de entrada é `index.
 
 ## Publicação no Cloudflare Pages
 
-- A raiz pública contém `robots.txt`, `sitemap.txt` e `llms.txt`. O build também publica os aliases solicitados `robot.txt` e `llm.txt`, a partir dos mesmos arquivos de origem. O sitemap lista apenas a URL principal; as seções são âncoras da mesma página. Atualizar esses endereços e o link canonical se o domínio público mudar.
+- A raiz pública contém `robots.txt`, `sitemap.xml` e `llms.txt`. O sitemap XML lista apenas a URL principal; as seções são âncoras da mesma página. O build remove as cópias antigas `robot.txt`, `llm.txt` e `sitemap.txt` da saída local. Atualizar os endereços desses arquivos e o link canonical se o domínio público mudar.
 - Conta: Wesley Frostty.
 - Repositório: `FrosttyS18/IOX-LP-NOVA`, branch `main`.
 - Projeto: `iox-lp-nova`.
