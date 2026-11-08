@@ -18,7 +18,7 @@ Campos e fluxo da LP de origem, conferidos em 07/11/2026: https://codex-iox-90-v
 ## Ajustes visuais e movimento
 
 - O cabeçalho acompanha a rolagem no desktop e no celular. Os destinos dos links reservam espaço para a barra fixa.
-- O botão de tema aparece ao lado do contato acima de 1000 px. A escolha entre escuro e claro fica salva localmente; o padrão continua escuro. A troca revela a página inteira com um círculo partindo do botão em 750 ms, usando View Transitions. Com movimento reduzido ou sem suporte à API, a mudança é imediata. Fotos e símbolo metálico preservam suas cores.
+- O botão de tema aparece ao lado do contato acima de 1000 px; no celular e no tablet, fica à direita do logo no rodapé. A escolha entre escuro e claro fica salva localmente; o padrão continua escuro. A troca revela a página inteira com um círculo partindo do botão acionado em 750 ms, usando View Transitions. Com movimento reduzido ou sem suporte à API, a mudança é imediata. Fotos e símbolo metálico preservam suas cores.
 - No desktop, imagens e títulos usam limites de largura e altura da viewport, mantendo a proporção das imagens. O conteúdo do legado ocupa até 88% da altura disponível; a seção pode crescer além de uma tela.
 - Os respiros verticais não diminuem com a altura da janela: 96 px por lado no desktop amplo e 80 px até 1750 px de largura. Tablet e celular mantêm os espaçamentos próprios. Não há zoom, escala ou desfoque aplicado à página inteira.
 - Conferência responsiva final: 1920×1080, 1920×900, 2560×1080, 1440×900, 1366×768, 768×1024, 430×932 e 390×844, sem overflow horizontal. A revisão mobile considera larguras a partir de 390 px; as regras existentes abaixo disso foram preservadas.
@@ -30,7 +30,8 @@ Campos e fluxo da LP de origem, conferidos em 07/11/2026: https://codex-iox-90-v
 - Os títulos entram uma vez, com subida de 20 px e fade. O título da hero anima ao carregar a página durante 1400 ms, com progressão gradual e sem depender de scroll. Os demais títulos usam 600 ms e aguardam o scroll e uma margem de 120 px dentro da tela antes de animar. Sem desfoque, mudanças de tamanho ou alteração do layout. Sem JavaScript, na impressão ou com movimento reduzido, permanecem visíveis.
 - O texto histórico do card da terceira seção usa 20 px no desktop, com tamanhos próprios mantidos no tablet e celular.
 - A seção do legado começa preta e recebe branco por Circular Reveal: um círculo de borda definida cresce do centro do topo até cobrir os cantos da seção. O scroll dispara o preenchimento quando o topo da seção chega aos primeiros 80 px da tela (ou 8% da altura em telas menores), no início da leitura. O preenchimento dura 400 ms e termina mesmo se a rolagem parar. O título muda de contraste na área atravessada pelo círculo. Ao subir de volta pelo ponto de entrada, o círculo recolhe em 400 ms. Uma tolerância de 24 px evita alternância por pequenos movimentos na fronteira. Nenhuma das transições pausa pela metade.
-- Movimento reduzido mantém as informações finais visíveis e a seção branca sem animação.
+- Movimento reduzido mantém as informações finais visíveis e, no tema escuro, a seção branca sem animação.
+- No tema claro, a seção do legado inverte o mesmo efeito: começa clara, o círculo preenche de preto ao chegar e recolhe ao subir. O título mantém contraste durante a passagem; com movimento reduzido, a seção fica preta sem animação.
 - Rodapé compactado com texto legal em 14 px, inclusive no celular.
 
 ## Simulador

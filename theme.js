@@ -8,7 +8,7 @@
   root.dataset.theme = initialTheme;
 
   document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.theme-toggle');
+    const toggles = [...document.querySelectorAll('.theme-toggle')];
     const themeColor = document.querySelector('meta[name="theme-color"]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let switching = false;
@@ -16,8 +16,10 @@
     function applyTheme(theme) {
       root.dataset.theme = theme;
       const label = theme === 'light' ? 'Ativar modo escuro' : 'Ativar modo claro';
-      toggle.setAttribute('aria-label', label);
-      toggle.title = label;
+      for (const toggle of toggles) {
+        toggle.setAttribute('aria-label', label);
+        toggle.title = label;
+      }
       themeColor.content = theme === 'light' ? '#faf9f6' : '#0d0d0d';
       try {
         localStorage.setItem(storageKey, theme);
@@ -25,10 +27,9 @@
     }
 
     applyTheme(initialTheme);
-    toggle.hidden = false;
-
-    toggle.addEventListener('click', async () => {
+    async function toggleTheme(event) {
       if (switching) return;
+      const toggle = event.currentTarget;
       const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
       if (reducedMotion.matches || !document.startViewTransition) {
         applyTheme(nextTheme);
@@ -56,6 +57,11 @@
         root.classList.remove('theme-transitioning');
         switching = false;
       }
-    });
+    }
+
+    for (const toggle of toggles) {
+      toggle.hidden = false;
+      toggle.addEventListener('click', toggleTheme);
+    }
   });
 })();

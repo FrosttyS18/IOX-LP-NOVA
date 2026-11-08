@@ -5,6 +5,8 @@ html { scroll-padding-top: calc(var(--header-height) + 24px); }
 .header-actions .header-contact { margin-right: 0; }
 .theme-toggle { display: grid; place-items: center; flex: 0 0 50px; width: 50px; height: 50px; padding: 0; border: 0; border-radius: 50%; color: #efc372; background: #202020; cursor: pointer; }
 .theme-toggle:hover { background: #2a2a2a; }
+.footer-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.theme-toggle--footer { display: none; }
 .theme-toggle svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .theme-toggle .theme-moon { display: none; }
 [data-theme="light"] .theme-toggle .theme-moon { display: block; }
@@ -104,7 +106,11 @@ html { scroll-padding-top: calc(var(--header-height) + 24px); }
 [data-theme="light"] #journey-series text[data-series="ibov"] { fill: #545a62 !important; stroke: none; }
 [data-theme="light"] #journey-series circle[data-series="ifix"],
 [data-theme="light"] #journey-series text[data-series="ifix"] { fill: #9b6d22 !important; stroke: none; }
-[data-theme="light"] .legacy.has-reveal { background: #fff; }
+[data-theme="light"] .legacy { background: #0d0d0d; color: #f2f2f2; }
+[data-theme="light"] .legacy.has-reveal { background: #faf9f6; }
+[data-theme="light"] .legacy.has-reveal::before { background: #0d0d0d; }
+[data-theme="light"] .legacy-title > span:last-child { background-image: linear-gradient(100deg, #f2f2f2 38%, #7a7a7a 100%); }
+[data-theme="light"] .legacy-outline { border-color: #555; }
 [data-theme="light"] .contact-facts > div { background: var(--card-surface); }
 [data-theme="light"] .contact-facts svg { stroke: #95651d; }
 [data-theme="light"] .select-trigger.is-placeholder { color: #716b63; }
@@ -131,7 +137,8 @@ html { scroll-padding-top: calc(var(--header-height) + 24px); }
 
 @media (max-width: 1000px) {
   :root { --header-height: 84px; }
-  .theme-toggle { display: none; }
+  .header-actions .theme-toggle { display: none; }
+  .theme-toggle--footer { display: grid; width: 44px; height: 44px; flex-basis: 44px; }
 }
 @media (max-width: 540px) {
   :root { --header-height: 76px; }
