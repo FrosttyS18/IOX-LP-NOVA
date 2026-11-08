@@ -24,6 +24,7 @@ Campos e fluxo da LP de origem, conferidos em 07/11/2026: https://codex-iox-90-v
 - Conferência responsiva final: 1920×1080, 1920×900, 2560×1080, 1440×900, 1366×768, 768×1024, 430×932 e 390×844, sem overflow horizontal. A revisão mobile considera larguras a partir de 390 px; as regras existentes abaixo disso foram preservadas.
 - O título do comparativo equilibra a primeira frase e permite que a frase em semibold ocupe uma linha no desktop intermediário. As porcentagens acompanham a ponta das barras durante a animação, com intervalo de 18 px no desktop, 16 px no tablet e 12 px no celular.
 - Comparativo de 2025, fontes e aviso do simulador compactados; imagem da segunda seção menor, mantendo proporções e transparência.
+- O símbolo metálico da hero usa WebP de 66.458 bytes, convertido do PNG original de 374.636 bytes: redução de 82,3%, com dimensões 562×567 e canal alpha preservados. O PNG original permanece nos assets.
 - Formulário e simulador usam a mesma superfície neutra e borda discreta dos cards. Os campos do formulário têm bordas ainda mais suaves, e o envio usa o botão arredondado do site.
 - O placeholder do seletor de investimento mantém opacidade de 72% no tema escuro e texto cinza sem transparência adicional no tema claro, para preservar contraste de leitura.
 - Fontes definidas anteriormente em 20 px reduzidas para 16 px, incluindo textos do comparativo, rótulos e porcentagens das barras, botões e resultados do simulador. Os respiros entre seções foram preservados. Intervalo entre formulário e chamada final reduzido.
