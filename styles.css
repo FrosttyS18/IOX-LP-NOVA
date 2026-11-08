@@ -77,9 +77,9 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
 .hero-description { margin: 33px 0 34px; color: #969696; font-size: 18px; line-height: 35px; letter-spacing: 0; }
 .hero-art { position: relative; width: 778px; max-width: none; aspect-ratio: 778 / 609; margin-left: 2px; }
 .metal-symbol { position: absolute; width: 71.72%; height: auto; top: 4%; left: 9.9%; }
-.floating-card { position: absolute; animation: card-float 7s ease-in-out infinite; }
+.floating-card { position: absolute; animation: card-float 4.8s ease-in-out infinite; }
 .chart-card { width: 31.75%; right: 0; top: 0; }
-.number-card { bottom: 12px; left: 0; width: 161px; height: 106px; animation-duration: 8s; animation-delay: -3s; }
+.number-card { bottom: 12px; left: 0; width: 161px; height: 106px; animation-duration: 5.8s; animation-delay: -3s; }
 .card-surface { transform: translate(var(--pointer-x, 0px), var(--pointer-y, 0px)) rotate(var(--pointer-rotation, 0deg)); transition: transform 400ms ease-out; }
 .performance-chart { width: 100%; height: auto; }
 .performance-number { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 23px; background: linear-gradient(115deg, #0d0d0d 3%, #363636 50%, #969696 100%); border: 1px solid #8c8c8c; border-left-color: #333; border-bottom-color: #555; }
@@ -96,7 +96,7 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
 .credential-label { display: inline-flex; align-items: center; gap: 8px; border-radius: 100px; padding-inline: 14px; background: #202020; line-height: 28px; }
 
 @keyframes credentials-loop { to { transform: translateX(-50%); } }
-@keyframes card-float { 0%, 100% { transform: translateY(0) rotate(-.5deg); } 50% { transform: translateY(-8px) rotate(.5deg); } }
+@keyframes card-float { 0%, 100% { transform: translateY(0) rotate(-.8deg); } 50% { transform: translateY(-16px) rotate(.8deg); } }
 
 .lifestyle { padding: 128px 0 94px; }
 .lifestyle-inner { width: min(100% - 80px, 1456px); margin-inline: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; }
