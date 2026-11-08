@@ -152,7 +152,7 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
 #simulator-title { margin: 0 0 48px; font-size: 52px; line-height: 1.25; font-weight: 400; letter-spacing: -.6px; background: linear-gradient(100deg, #fff 20%, #777 100%); background-clip: text; -webkit-text-fill-color: transparent; }
 .simulator-copy { font-size: 16px; line-height: 20px; color: #969696; }
 .simulator-copy p { margin: 0 0 20px; }
-.simulator-notes { display: flex; align-items: start; gap: 10px; margin-top: 28px; padding: 14px 18px; border: 1px solid var(--card-border); border-radius: 20px; background: #121212; font-size: 14px; line-height: 18px; color: #c2c2c2; }
+.simulator-notes { display: flex; align-items: start; gap: 10px; margin-top: 28px; padding: 14px 18px; border: 1px solid var(--card-border); border-radius: 20px; background: #121212; font-size: 12px; line-height: 16px; color: #c2c2c2; }
 .info-mark { flex: 0 0 18px; width: 18px; height: 18px; display: grid; place-items: center; border: 1px solid #555; border-radius: 50%; font-size: 12px; }
 .simulator-notes p { margin: 0; }
 .simulator-notes p + p { margin-top: 12px; color: #969696; }
@@ -395,6 +395,11 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
 
 @media (min-width: 1001px) and (max-width: 1750px) {
   :root { --section-space: 80px; }
+  .simulator-intro { display: flex; flex-direction: column; align-self: stretch; }
+  .simulator-copy { padding-bottom: 20px; }
+  .simulator-copy p:last-child { margin-bottom: 0; }
+  .simulator-notes { margin-top: auto; padding-block: 10px; }
+  .simulator-notes p + p { margin-top: 10px; }
   #comparison-title .comparison-break { display: none; }
 }
 
