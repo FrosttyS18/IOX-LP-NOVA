@@ -1,7 +1,7 @@
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const returnsCard = document.querySelector('.returns-card');
 const legacySection = document.querySelector('.legacy');
-const pageHeadings = [...document.querySelectorAll('main h1, main h2, main h3')];
+const pageHeadings = [...document.querySelectorAll('main h1, main h2, main h3, [data-heading-reveal]')];
 const visibleHeadings = new Set();
 const headingStartScroll = window.scrollY;
 let headingsStarted = false;

@@ -106,7 +106,9 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
 .lifestyle-text { max-width: 500px; margin-left: 4px; margin-bottom: 42px; color: #969696; font-size: 16px; line-height: 20px; }
 .lifestyle-text p { margin: 0 0 20px; }
 .lifestyle-text p:last-child { margin-bottom: 0; }
-.lifestyle-image { width: min(100%, 608px); height: auto; justify-self: center; }
+.lifestyle-visual { position: relative; width: min(100%, 608px); justify-self: center; }
+.lifestyle-image { width: 100%; height: auto; }
+.lifestyle-image-caption { display: none; }
 .proof { width: min(100% - 80px, 1440px); margin-inline: auto; padding: 48px 0 180px; }
 .proof-title { margin-bottom: 72px; text-align: center; }
 .proof-title > span { margin-inline: auto; }
@@ -344,7 +346,7 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
   .lifestyle { padding-block: var(--section-space); }
   .lifestyle-inner { align-items: center; }
   .lifestyle-copy { padding-top: 0; }
-  .lifestyle-image { width: min(100%, 608px, calc(82svh * 708 / 976)); height: auto; }
+  .lifestyle-visual { width: min(100%, 608px, calc(82svh * 708 / 976)); }
   .lifestyle-intro { font-size: clamp(22px, 2.7svh, 30px); line-height: 1.3; margin-block: 22px 28px; }
   .lifestyle-text { margin-bottom: 28px; }
   .proof { padding-block: var(--section-space); }
@@ -494,6 +496,9 @@ h1 > span, .section-title > span { display: block; width: fit-content; backgroun
   .lifestyle-intro { font-size: 22px; line-height: 1.4; margin-top: 24px; margin-bottom: 28px; }
   .lifestyle-text { font-size: 15px; line-height: 1.6; }
   .lifestyle .button { font-size: 15px; min-height: 48px; padding-inline: 18px; }
+  .lifestyle-image-caption { display: block; position: absolute; left: 24px; right: 24px; bottom: 14%; margin: 0; color: #fff; font-size: clamp(28px, 7vw, 36px); font-weight: 500; line-height: 1.2; letter-spacing: -.03em; text-shadow: none; }
+  .lifestyle-image-caption > span { display: block; }
+  .lifestyle-image-caption.is-heading-visible { animation-duration: 1000ms; }
   .proof-title { font-size: clamp(26px, 6.6vw, 35px); margin-bottom: 30px; }
   .proof-story { font-size: 15px; line-height: 1.55; padding: 28px 24px; border-radius: 22px; }
   .proof-story p { margin-bottom: 22px; }
